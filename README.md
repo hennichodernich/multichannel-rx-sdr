@@ -6,5 +6,5 @@
 
 Consider this work in progress.  
 
-On the host side, you'll need [my gr-iio blocks][https://github.com/hennichodernich/gr-iio).
+On the host side, you'll need [my gr-iio blocks](https://github.com/hennichodernich/gr-iio).
 
