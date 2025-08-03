@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-263,-70",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:10.0 TLS
+#  -string -flagsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 50 -defaultsOSRD
+preplace port DMA_TX_ACK -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port DMA_RX_ACK -pg 1 -lvl 0 -x 0 -y 110 -defaultsOSRD
+preplace port DMA_TX_REQ -pg 1 -lvl 2 -x 390 -y 100 -defaultsOSRD
+preplace port DMA_RX_REQ -pg 1 -lvl 2 -x 390 -y 130 -defaultsOSRD
+preplace port axi_aclk -pg 1 -lvl 0 -x 0 -y 200 -defaultsOSRD
+preplace port axi_resetn -pg 1 -lvl 0 -x 0 -y 230 -defaultsOSRD
+preplace port common_audio_clk -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace portBus BCLK_O_0 -pg 1 -lvl 2 -x 390 -y 160 -defaultsOSRD
+preplace portBus LRCLK_O_0 -pg 1 -lvl 2 -x 390 -y 190 -defaultsOSRD
+preplace portBus SDATA_O_0 -pg 1 -lvl 2 -x 390 -y 220 -defaultsOSRD
+preplace portBus SDATA_I_0 -pg 1 -lvl 0 -x 0 -y 170 -defaultsOSRD
+preplace inst axi_i2s_adi_0 -pg 1 -lvl 1 -x 200 -y 160 -defaultsOSRD
+preplace netloc m_axis_aclk_0_1 1 0 1 40 160n
+preplace netloc m_axis_resetn_0_1 1 0 1 50 180n
+preplace netloc common_audio_clk_1 1 0 1 20J 120n
+preplace netloc axi_i2s_adi_0_BCLK_O 1 1 1 360J 150n
+preplace netloc axi_i2s_adi_0_LRCLK_O 1 1 1 360J 170n
+preplace netloc axi_i2s_adi_0_SDATA_O 1 1 1 350J 190n
+preplace netloc SDATA_I_0_1 1 0 1 30J 140n
+preplace netloc Conn2 1 0 1 20J 50n
+preplace netloc Conn3 1 0 1 NJ 80
+preplace netloc Conn5 1 1 1 360J 100n
+preplace netloc Conn4 1 0 1 20 100n
+preplace netloc Conn6 1 1 1 N 130
+levelinfo -pg 1 0 200 390
+pagesize -pg 1 -db -bbox -sgen -180 0 550 320
+"
+}
+0
