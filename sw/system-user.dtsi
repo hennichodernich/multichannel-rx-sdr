@@ -1,0 +1,54 @@
+/include/ "system-conf.dtsi"
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "EBAZ4205 Zynq Board";
+	compatible = "noname,zynq-ebaz4205", "xlnx,zynq-7000";	
+	
+       regulator_vcc33: fixedregulator {
+                compatible = "regulator-fixed";
+                regulator-name = "VCC33";
+                regulator-min-microvolt = <3300000>;
+                regulator-max-microvolt = <3300000>;
+                regulator-boot-on;
+                regulator-always-on;
+        };
+
+	/* external oscillator */
+    	osc_audio: oscillator {
+       		compatible = "fixed-clock";
+       		#clock-cells = <0>;
+       		clock-frequency  = <24576000>;
+		clock-accuracy = <50>;
+    	};
+	multi_i2s_adc {
+		compatible = "hnch,multi-i2s-adc-1.0";
+        	dmas = <&axi_dmac_0 0>;
+		dma-names = "rx";
+	};
+};
+
+&clkc {
+    fclk-enable = <0xf>;
+};
+
+&axi_dmac_0 {
+	compatible = "adi,axi-dmac-1.00.a";
+	clocks = <&clkc 15>;
+	#dma-cells = <1>;
+
+	adi,channels {
+		#size-cells = <0>;
+		#address-cells = <1>;
+
+		dma-channel@0 {
+			reg = <0>;
+			adi,source-bus-width = <256>;
+			adi,source-bus-type = <2>;
+			adi,destination-bus-width = <64>;
+			adi,destination-bus-type = <0>;
+			adi,length-width = <24>;
+		};
+	};
+};
+
